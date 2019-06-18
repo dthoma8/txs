@@ -16,6 +16,7 @@
     - configure -NOT done
         - hope/wish/try -NOT done
     - think through a possible date solution -NOT done
+        - continue to flesh out custom regex approach
 
 #### iwfm
 
