@@ -1,16 +1,21 @@
 #### a9
 
-- shruti indicated work to start 6/17
+- shruti indicated work to start week of 6/17
 
 #### digitalanalyst
 
-- continue to make changes to the front edn
+- continue to make changes to the front end
+    - meet w/andy to discuss some design approaches and involvement moving forward
 - continue to develop the ambig domain handler
+    - configure
+    - test implementation
 
 #### iwfm
 
-- apply idea from email of implementations that speed up quadtree comps
+- apply idea from email of implementations that speed up quadtree comps -done
 - add in barcharts
+    - continue to develop the barcharts
+        - fix the xaxis. track down the translation function as being the possible culprit
 - tie barchart highlights to the tracking of time
 
 #### appchallenge
