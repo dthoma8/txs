@@ -47,6 +47,9 @@
 - get copy of azure -NOT done
 - setup git -NOT done
 - diagnose swim lanes, reframe approach -NOT done
+    - also to consider here. how best to narrow our focus seeing as we do not have massize servers to ingest the world of data.
 - distribute info to team -NOT done
 - wait on charge code -NOT done
 - setup meeting to dicsuss approaches -NOT done
+- incorporate Ericson's approach. determine how to fold it in and modify as needed - NOT done
+- look into deploying kbana/esearch on azure
