@@ -36,6 +36,13 @@
         - another barrier conquered. the formatting of the container. essentially set each of the bar plot to the appropriate negative margin-top px to designate their positioning relative to one another and used transform: scale() to resize to something reasonable.
         - highlighting for mousover currently an issue. most likely a function of bad formatting. - NOT done
 - tie barchart highlights to the tracking of time -NOT done
+    - tie in move component
+    - each bar will need to store a next_move_time to indicate when the next time period begins
+    - this requires the time data to be passed to the barcharts.js file
+    - each bar chart has a x, y coordinate. however, they are currentlyt in a different plane and may not allow movement from plane to plane
+    - in order to implement this, it may be necessary to move all the visuals into one plane to create the same reference space which.could.be.a.pain.
+    - during this period, fill-opacity is 1.0
+
 - add in coordinates to each bar chart to render opaque coordinates - NOT done
 - provide appropriate nodes with the approriate coordinates - NOT done
     - we currently have the start period of each node in which we can use to deduce what the node is to put where - NOT done
