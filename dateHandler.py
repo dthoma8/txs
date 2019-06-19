@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import  joblib
 
 class DateHandler():
     
@@ -8,50 +9,50 @@ class DateHandler():
         #Q(): Are we currently able to identify the presence of the date?
             #A(): Year, but it is ambiguous
         self.tokens = tokens
-        #TODO(): tie in schema to have sense of how to form sql
-        self.schema=schema
-        # link vocab to common date cases
-        self.vocab = {"getDate":["on [date]", "for [date]",
+        
+        self.schema=schema#TODO(): tie in schema to have sense of how to form sql
+        
+        self.vocab = {"getDate":["on [date]", "for [date]",# link vocab to common date cases, #ex. of getDate: what is the inventory right now?
                                  "of [date]", "where [date]",
                                  "right [date]", "in [date]"
                                 ],
-                      #ex. of getDate: what is the inventory right now?
-                      "getPeriod":["from [date] to [date]", "between [date] and [date]",
+                      
+                      "getPeriod":["from [date] to [date]", "between [date] and [date]",#ex. of getPeriod: what is was our inventory from april to june?
                                    "period of [date] to [date]", "in [date] to [date]"
                                   ], 
-                      #ex. of getPeriod: what is was our inventory from april to june?
-                      "getLastDate":["last [date]", "[date] last year", 
+                      
+                      "getLastDate":["last [date]", "[date] last year", #ex. of getLastDate: what was revenue last october?
                                      "[date] of last year", "last year's [date]"
                                     ], 
-                      #ex. of getLastDate: what was revenue last october?
-                      "getLastPeriod":["last [date]", "prior [date]", "previous [date]"], 
-                      #ex. of getLastPeriod: what was the budget last year in between october and december?
-                      #ex. of getMultiple: can you return the budget for fy quarter 2 and 4 in 2017?
-                      "triggers":["january", "february", "march", "april", "may", "june",
+                      
+                      "getLastPeriod":["last [date]", "prior [date]", "previous [date]"], #ex. of getLastPeriod: what was the budget last year in between october and december?
+                      
+                      "triggers":["january", "february", "march", "april", "may", "june", #ex. of getMultiple: can you return the budget for fy quarter 2 and 4 in 2017?
                                   "july", "august", "september", "october", "november",
                                   "december", "jan", "feb", "mar", "apr", "jun", "jul",
                                   "aug", "sep", "oct", "nov", "dec", "quarter", "period",
                                   "duration", "year", "month"
                                  ]
                      }
-        self.parser.mos = r"(?:[jJ]an*)|(?:[fF]eb*)|(?:[mM]ar*)|(?:[aA]pr*)|(?:[mM]ay*)|(?:[jJ]un*)|(?:[jJ]ul*)|(?:[aA]ug*)|(?:[sS]ep*)|(?:[oO]ct*)|(?:[nN]ov*)|(?:[dD]ec*)"
-        self.parser.mmddyys = r"(((\d{2})|(\d{1}))[/.-](\d{2})[/.-]((\d{4})|(\d{2}))$)|(((\d{2})|(\d{1}))[/.-](\d{2})[/.-]((\d{4})|(\d{2}))$)"
-        self.parser.mmyys = None
+        self.parser_dict = {
+            "month":r"(?:[jJ]an*)|(?:[fF]eb*)|(?:[mM]ar*)|(?:[aA]pr*)|(?:[mM]ay*)|(?:[jJ]un*)|(?:[jJ]ul*)|(?:[aA]ug*)|(?:[sS]ep*)|(?:[oO]ct*)|(?:[nN]ov*)|(?:[dD]ec*)",
+            "date":{"mmddyys":r"(((\d{2})|(\d{1}))[/.-](\d{2})[/.-]((\d{4})|(\d{2}))$)|(((\d{2})|(\d{1}))[/.-](\d{2})[/.-]((\d{4})|(\d{2}))$)",
+                    "mmyys":None,
+            },
+            "duration":None,
+            "period":None,#TODO(): find the diff ways can be ref'd
+            "quarter":None#TODO(): find the diff ways can be ref'd
+        }
     # is coercible to date? how many x in 2012? what department is employee # 2012 in ?
-    
-    def identifyDateCase(self, tokens):
-        try: 
-            self.getPhrases=getPhrases
-            self.evalPhrases=evalPhrases
-            # eval presence of trigger w/in sentence
-            return self.getPhrases().evalPhrases()
-        except Exception as e:
-            return e
-    def getDate(self):
+    def getDate(self, idx):
         try:
-            date_ents = self.date_ents
-            schema = self.schema
+            # assumes one case - spc'd by idx
+            date_ent = self.date_ents[idx]
+
             # eval if schema stores date in single date col or multiple cols
+            # if month, day, year in schema or date, if quarter or other period stored
+            self.schema.evalDateSchema()
+
             pass
         except Exception as e:
             return 
@@ -77,11 +78,15 @@ class DateHandler():
         except Exception as e:
             return e
     def getPhrases(self):    
+        print("getPhrases called")
         try:
             tokens = self.tokens
-            if pd.Series(tokens).isin(self.vocab["triggers"]):
+            print("tokens avail", tokens)
+            if any(pd.Series(tokens).isin(self.vocab["triggers"])):
+                print("id'd tokens that are also date triggers")
                 # key: date_ent -> sub-key: phrase, query --> values
                 date_ents = dict((k, {}) for k in set(tokens).intersection(set(self.vocab["triggers"])))
+                print("formed date entities: ", date_ents)
                 for date_ent in date_ents:
                     #initialize lists
                     date_ents[date_ent]["phrase"], date_ents[date_ent]["query"], date_ents[date_ent]["case"] = [], [], []
@@ -117,7 +122,6 @@ class DateHandler():
             return self
         except Exception as e:
             return e
-        
     class crossCheck(list):
         def check(self, other_list):
             try:
@@ -127,6 +131,41 @@ class DateHandler():
                         return matches
             except Exception as e:
                 return e
+        def parserCheck(self):
+            pass
+
+
+    def identifyDateCase(self, tokens):
+        try: 
+            
+            self.tokens=tokens
+            # eval presence of trigger w/in sentence
+            self=self.getPhrases().evalPhrases()
+            return self
+        except Exception as e:
+            return e
+
+    def evalDateSchema(self):
+        
+        try:
+            # peak out how schema is currently stored
+            entities, tables = joblib.open("curschema.pkl")
+            matches = set([k.lower() for k in entities.keys()]).intersection(self.vocab["triggers"])
+            # so now we have identified matches from trigger words to the schema. meaning, each of the 
+            #trigger words that align with the schema are columns in the dataset that we will have to 
+            # use to query. at this point it makes sense to hava a parser associated with each possible 
+            # combination and parse according to this using our dictionary of parsers
+            if matches:
+                #proceed
+                if "date" in matches:
+                    pass
+                elif "year" in matches:
+                    pass
+            else:
+                pass
+            return scheme
+        except Exception as e:
+            return e
     # got this from a little duckling: https://github.com/facebook/duckling/tree/master/Duckling
     def MMDDRule(self, date_ent):
         pass

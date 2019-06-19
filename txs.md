@@ -15,8 +15,16 @@
 - continue to develop the ambig domain handler -NOT done
     - configure -NOT done
         - hope/wish/try -NOT done
-    - think through a possible date solution -NOT done
-        - continue to flesh out custom regex approach
+- think through a possible date solution 
+    - Approach
+        - provided an input. 
+            -> id date inputs
+            -> id date usage - requesting value for a period, on spec'd date, etc.
+            -> understand the existing schema and the storage of date entities
+            -> reframe date inputs to fit the the desired schema usage
+            -> tie date usage to function that will form sql query where statement to filter for given date conditions
+    - continue to develop and test this approach. currently, there is a struggle in identifying date entities should they have adjoining characters. find a way to systemically be able to parse this information. currently, we have a regex implementation that could perform this. continue to work out this implementation in crossCheck. - not DONE
+
 
 #### iwfm
 
