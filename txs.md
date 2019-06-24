@@ -34,8 +34,8 @@
         - fix the xaxis. track down the translation function as being the possible culprit - done. no need for axes. range/height/y turned out to be the culprit
         - need to position properly together with other elements on the page. for some reason, the network vis wants to write to one of the two barcharts -DONE. BC there were multiple svgs on the page. specifying to write to svg doesn't exactly work. changed to d3.select('actualname)
         - another barrier conquered. the formatting of the container. essentially set each of the bar plot to the appropriate negative margin-top px to designate their positioning relative to one another and used transform: scale() to resize to something reasonable.
-        - highlighting for mousover currently an issue. most likely a function of bad formatting. - NOT done
-- PRIORITY(): potentially append both of the bar charts to an individual svg element rather than two separate ones. this could help retain scale for the visual as there is a period when 81 people attrited and the 31 new hires came in but there is very little distinction between the two bar charts
+        - highlighting for mousover currently an issue. most likely a function of bad formatting. - NOT done/DONE
+- PRIORITY(): potentially append both of the bar charts to an individual svg element rather than two separate ones. this could help retain scale for the visual as there is a period when 81 people attrited and the 31 new hires came in but there is very little distinction between the two bar charts - DONE
 - tie barchart highlights to the tracking of time -NOT done
     - tie in move component
     - each bar will need to store a next_move_time to indicate when the next time period begins
