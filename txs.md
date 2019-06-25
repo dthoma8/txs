@@ -22,8 +22,10 @@
             -> id date usage - requesting value for a period, on spec'd date, etc.
             -> understand the existing schema and the storage of date entities
             -> reframe date inputs to fit the the desired schema usage
-            -> tie date usage to function that will form sql query where statement to filter for given date conditions
-    - continue to develop and test this approach. currently, there is a struggle in identifying date entities should they have adjoining characters. find a way to systemically be able to parse this information. currently, we have a regex implementation that could perform this. continue to work out this implementation in crossCheck. - not DONE
+    - continue to develop and test this approach. currently, there is a struggle in identifying date entities should they have adjoining characters. find a way to systemically be able to parse this information. currently, we have a regex implementation that could perform this. continue to work out this implementation in crossCheck. - DONE
+        - able to parse explicit and implicit date values. - roughly. However, the next layer of implementation is to relay implicit values to some actual date value that is queryable. - NOT done
+        - after that, there would be the need to identify the usage of the date to form an idea of what is being requested (e.g. range between two dates, snapshot at each date, etc.) - NOT done
+        - then schema will need to be inferred to understand how to specify the entities that the query is looking for. - NOT done
 
 
 #### iwfm
