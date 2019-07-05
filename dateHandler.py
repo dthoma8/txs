@@ -44,7 +44,11 @@ class DateHandler():
             #"period": None,  # TODO(): find the diff ways can be ref'd
             #"quarter": None  # TODO(): find the diff ways can be ref'd
         }
-        self.month_maps = {1:"january", 2: "february", 3: "march", 4:"april", 5:"may", 6:"june", 7:"july", 8:"august", 9:"september", 10:"october", 11:"november", 12:"december", "jan":"january", "feb":"feburary", "mar":"march", "apr":"april", "jun":"june", "jul":"july", "aug":"august", "sep":"september", "oct":"october", "nov":"november", "dec":"december"}
+        self.month_maps = {"january":1, "february":2, "march":3, "april":4, "may":5, 
+                           "june":6, "july":7, "august":8, "september":9, "october":10,
+                           "november":11, "december":12, "jan":1, "feb":2, "mar":3, "apr":4, 
+                           "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12
+                          }
     class listFuncs(list):
         def walkLeft(self, idx=0, dist=0):
             #print("walkLeft called\n")
@@ -106,36 +110,6 @@ class DateHandler():
                 return phrase
             else:
                 return []
-    class dateFuncs():
-        def getLast(self, entity):
-            try:
-                now = datetime.now()
-                date_type = [k for k in entity.keys()][0]
-                if date_type == 'year':
-                    last_year = now.year-1
-                    self.date_ents[entity]["value"]={"year":last_year}
-                elif date_type == "month":
-                    # two lanes, there is a month id'd or it is generically referencing last month
-                    if entity["month"] == "month":
-                        last_month = now.month-1
-                        last_month = self.month_maps[last_month]
-                        self.date_ents[entity]["value"]={"month":last_month}
-                    else:
-                        last_year = now.year-1
-                        self.date_ents[entity]["value"]={"month":entity[date_type], "year":last_year}
-                elif date_type == "week":
-                    pass
-                elif date_type == "day":
-                    pass
-                elif date_type == "fiscal_year":
-                    pass
-                elif date_type == "quarter":
-                    pass
-                return self
-            except Exception as e:
-                return e
-        def getRange(self):
-            pass
     def getDateEnts(self, date_token=None):
         print("getDateEnts called")
         try:
@@ -148,7 +122,7 @@ class DateHandler():
                 date_ents = dict((k.group(), {}) for k in trigids if k)
                 for i, date_ent in enumerate(date_ents):
                     idx = idxs[i]
-                    date_ents[date_ent]["date_type"], date_ents[date_ent]["phrase"], date_ents[date_ent]["case"] = [], [], [] # initialize lists
+                    date_ents[date_ent]["date_type"], date_ents[date_ent]["phrase"], date_ents[date_ent]["case"], date_ents[date_ent]["value"] = [], [], [], [] # initialize lists
                     date_ents[date_ent]["phrase"].extend(self.listFuncs(tokens).walkLeft(idx=idx, dist=2)+self.listFuncs(tokens).walkRight(idx=idx, dist=2))  # construct possible phrases    
                     [date_ents[date_ent]["date_type"].append(date_type) for date_type in self.parser_dict if re.search(self.parser_dict[date_type], date_ent) and date_ents[date_ent]["date_type"]==[]]
 
@@ -168,7 +142,7 @@ class DateHandler():
                     date_ents = dict((k.group(), {}) for k in mxs if k)
                     idxs = pd.Series(mxs).dropna().index.tolist()
                     for i, date_ent in enumerate(date_ents):
-                        date_ents[date_ent]["date_type"], date_ents[date_ent]["phrase"], date_ents[date_ent]["case"]= [], [], []  # initialize lists
+                        date_ents[date_ent]["date_type"], date_ents[date_ent]["phrase"], date_ents[date_ent]["case"], date_ents[date_ent]["value"] = [], [], [], [] # initialize lists
                         idx = idxs[i]
                         date_ents[date_ent]["phrase"].extend(self.listFuncs(tokens).walkLeft(idx=idx, dist=2)+self.listFuncs(tokens).walkRight(idx=idx, dist=2))  # construct possible phrases
                         [date_ents[date_ent]["date_type"].append(date_type) for date_type in self.parser_dict if re.search(self.parser_dict[date_type], date_ent)]
@@ -218,38 +192,66 @@ class DateHandler():
             return self
         except Exception as e:
             return e
+    class dateFuncs():
+        def getLast(self, entity):
+            try:
+                now = datetime.now()
+                date_type = [k for k in entity.keys()][0]
+                if date_type == 'year':
+                    last_year = now.year-1
+                    self.date_ents[entity]["value"]={"year":last_year}
+                elif date_type == "month":
+                    # two lanes, there is a month id'd or it is generically referencing last month
+                    if entity["month"] == "month":
+                        last_month = now.month-1
+                        last_month = self.month_maps[last_month]
+                        self.date_ents[entity]["value"]={"month":last_month}
+                    else:
+                        last_year = now.year-1
+                        self.date_ents[entity]["value"]={"month":entity[date_type], "year":last_year}
+                elif date_type == "week":
+                    pass
+                elif date_type == "day":
+                    pass
+                elif date_type == "fiscal_year":
+                    pass
+                elif date_type == "quarter":
+                    pass
+                return self
+            except Exception as e:
+                return e
+        def getRange(self):
+            pass
     def reformatDateEntities(self):
         print("reformatDateEntities called")
         try:
             for date_ent in self.date_ents:
                 # need to check if prior year provided
                 if self.schema_curr_style == "one_col":
-                    if re.search("|".join(self.parser_dict["mmddyy"]), date_ent):#iftheyveprovidedadatedonothing
+                    print("in one_col condition")
+                    if re.search(self.parser_dict["mmddyys"], date_ent):#iftheyveprovidedadatedonothing
                         print("no reformatting needed for one_col")
                         return self
                     else:
-                        print("reformatting one_col")
-                        # give me all transactions in 2012
-                        # give me all transactions in october
-                        # give me all transactions in october 2012
-                        # give me all transactions on christmas for the last 6 years
+                        print("reformatting one_col")# give me all transactions in 2012, give me all transactions in october, give me all transactions in october 2012, give me all transactions on christmas for the last 6 years
+                        
                         rev_month_map = dict((v,k) for k,v in self.month_maps.items())
                         if date_ent in rev_month_map:
-                            date_ent = rev_month_map[date_ent]
-                            print("this is the new date_ent", date_ent)
-                        elif date_ent in self.month_maps:
-                            date_ent = rev_month_map[self.month_maps[date_ent]]
+                            new_date_ent = rev_month_map[date_ent]
                             print("this is the new date_ent", date_ent)
 
                         if "year" in self.date_ents[date_ent]["value"]:
-                            #date_ent = {"date":str(date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])}
-                            print({"value":str(date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])})
+                            if date_ent["case"] == "getLastDate":
+                                self.dateFuncs().getLast(date_ent)
+                            #date_ent = {"date":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])}
+                            print({"value":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])})
                         else:
                             curr_year = datetime.now().year
                             #self.date_ents[date_ent]={"date":str(date_ent)+"/01/"+str(curr_year)}
-                            print({"value":str(date_ent)+"/01/"+str(curr_year)})
+                            print({"value":str(new_date_ent)+"/01/"+str(curr_year)})
                 elif self.schema_curr_style == "sep_cols":
-                    if re.search("|".join(self.parser_dict["mmddyys"]), date_ent):
+                    print("in sep_cols condition")
+                    if re.search(self.parser_dict["mmddyys"], date_ent):
                         print("reformatting happening for sep_cols")
                         month, day, year = date_ent.split("/").split("-").split(".")#TODO():obvfindsomethingbetter | operator potentially
                         self.date_ents[date_ent]={"month":self.month_maps[month], "day":day, "year":year}
