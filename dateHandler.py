@@ -47,7 +47,7 @@ class DateHandler():
         self.month_maps = {"january":1, "february":2, "march":3, "april":4, "may":5, 
                            "june":6, "july":7, "august":8, "september":9, "october":10,
                            "november":11, "december":12, "jan":1, "feb":2, "mar":3, "apr":4, 
-                           "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12
+                           "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12
                           }
     class listFuncs(list):
         def walkLeft(self, idx=0, dist=0):
@@ -115,7 +115,6 @@ class DateHandler():
         try:
             tokens = self.tokens
             trigids = [re.search("|".join(self.vocab_triggers["triggers"]), t) for t in tokens]
-            print("tokens id'd")
             if any(trigids):
                 idxs = pd.Series(trigids).dropna().index.tolist()
                 # key: date_ent -> sub-key: phrase, query --> values
@@ -128,17 +127,14 @@ class DateHandler():
 
                 #print("these are the date entities: ", date_ents)
                 self.date_ents = date_ents  # add attribute
-                print("this is the outgoing self", self)
+                #print("this is the outgoing self", self)
                 return self
             else:
                 mxs = [re.search(self.parser_dict["mmddyys"],t.replace("?", "")) for t in tokens]
                 #print("parser object", self.parser_dict["mmddyys"])
-                #print('these are the tokens being passed in ', tokens)
                 if not any(mxs):
-                    #print("imhere2")
                     return("No Date Present")
                 else:
-                    #print("imhere3")
                     date_ents = dict((k.group(), {}) for k in mxs if k)
                     idxs = pd.Series(mxs).dropna().index.tolist()
                     for i, date_ent in enumerate(date_ents):
@@ -149,28 +145,25 @@ class DateHandler():
 
                     #print("these are the date entities: ", date_ents)
                     self.date_ents = date_ents  # add attribute
-                    print("this is the outgoing self", self)
+                    #print("this is the outgoing self", self)
                     return self
         except Exception as e:
             return e
     def idDateCase(self):
         print("identifyDateCase called")
         try:
-            print("this is the incoming obj", self)
+            #print("this is the upcoming self", self)
             # runs after getDateEnts
             if hasattr(self, "date_ents"):
-                print("found attr")
                 for date_ent in self.date_ents:
-                    print("wemadeit")
                     for case in self.vocab_cases:
-                        print("this is the active case beign assessed",case)
+                        #print("this is the active case beign assessed",case)
                         case_string = "|".join(self.vocab_cases[case])
-                        
                         if any([re.search(case_string, p) for p in self.date_ents[date_ent]["phrase"]]):
                             self.date_ents[date_ent]["phrase"] = [re.search(case_string, p) for p in self.date_ents[date_ent]["phrase"]][0].string
-                            print("this is the phrase", self.date_ents[date_ent]["phrase"])
+                            #print("this is the phrase", self.date_ents[date_ent]["phrase"])
                             self.date_ents[date_ent]["case"] = case
-                            print("this is the case:", self.date_ents[date_ent]["case"])
+                            #print("this is the case:", self.date_ents[date_ent]["case"])
                             break
                 return self
             else:
@@ -181,47 +174,55 @@ class DateHandler():
         print("inferSchema called")
         try:
             schema = self.schema
-            print("this is what your schema looks like: ", schema)
+            #print("this is what your schema looks like: ", schema)
             for style in self.schema_style:
                 style_string = "|".join(self.schema_style[style])
                 if any([re.search(style_string,e).group() for e in self.schema["entities"] if re.search(style_string, e) is not None]):
-                    print("defining the current style",)
                     self.schema_curr_style=style
                     [re.search(style_string, e) for e in self.schema["entities"] if re.search(style_string, e) is not None][0].string
                     break
             return self
         except Exception as e:
             return e
-    class dateFuncs():
-        def getLast(self, entity):
-            try:
-                now = datetime.now()
-                date_type = [k for k in entity.keys()][0]
-                if date_type == 'year':
-                    last_year = now.year-1
-                    self.date_ents[entity]["value"]={"year":last_year}
-                elif date_type == "month":
-                    # two lanes, there is a month id'd or it is generically referencing last month
-                    if entity["month"] == "month":
-                        last_month = now.month-1
-                        last_month = self.month_maps[last_month]
-                        self.date_ents[entity]["value"]={"month":last_month}
-                    else:
-                        last_year = now.year-1
-                        self.date_ents[entity]["value"]={"month":entity[date_type], "year":last_year}
-                elif date_type == "week":
-                    pass
-                elif date_type == "day":
-                    pass
-                elif date_type == "fiscal_year":
-                    pass
-                elif date_type == "quarter":
-                    pass
+    def getLast(self, entity_name, entity_obj):
+        print("getLast called")
+        
+        try:
+            now = datetime.now()
+            date_type = entity_obj["date_type"][0]            
+            if date_type == 'year':
+                last_year = now.year-1
+                self.date_ents[entity_name]["value"]={"year":last_year}
+                print("last value", {"year":last_year})
                 return self
-            except Exception as e:
-                return e
-        def getRange(self):
-            pass
+            elif date_type == "month":
+                # two lanes, there is a month id'd or it is generically referencing last month
+                if entity_name == "month":
+                    last_month = now.month-1
+                    rev_month_maps = dict((v,k) for k,v in self.month_maps.items())
+                    last_month = rev_month_maps[last_month]
+                    self.date_ents[entity_name]["value"]={"month":last_month}
+                    print("last value", {"month":last_month})
+                    return self
+                else:
+                    last_year = now.year-1
+                    self.date_ents[entity_name]["value"]={"month":entity_name, "year":last_year}
+                    print("last value", {"month":entity_name, "year":last_year})
+                    return self
+            elif date_type == "week":
+                pass
+            elif date_type == "day":
+                pass
+            elif date_type == "fiscal_year":
+                pass
+            elif date_type == "quarter":
+                pass
+            return self
+        except Exception as e:
+            return e
+    def getRange(self):
+        print("getRange called")
+        pass
     def reformatDateEntities(self):
         print("reformatDateEntities called")
         try:
@@ -233,31 +234,36 @@ class DateHandler():
                         print("no reformatting needed for one_col")
                         return self
                     else:
-                        print("reformatting one_col")# give me all transactions in 2012, give me all transactions in october, give me all transactions in october 2012, give me all transactions on christmas for the last 6 years
-                        
-                        rev_month_map = dict((v,k) for k,v in self.month_maps.items())
-                        if date_ent in rev_month_map:
-                            new_date_ent = rev_month_map[date_ent]
-                            print("this is the new date_ent", date_ent)
+                        print("reformatting one_col")# give me all transactions in 2012, give me all transactions in october, give me all transactions in october 2012, give me all transactions on christmas for the last 6 years    
+                        if date_ent in self.month_maps:
+                            new_date_ent = self.month_maps[date_ent]
+                            #print("this is the new date_ent", new_date_ent)
+                            #print("this is the current date_ent", self.date_ents[date_ent])
+                            if self.date_ents[date_ent]["case"] == "getLastDate":
+                                self.getLast(date_ent, self.date_ents[date_ent])
 
                         if "year" in self.date_ents[date_ent]["value"]:
-                            if date_ent["case"] == "getLastDate":
-                                self.dateFuncs().getLast(date_ent)
+                            print("are we getting here?")
                             #date_ent = {"date":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])}
                             print({"value":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])})
+                            return self
                         else:
                             curr_year = datetime.now().year
                             #self.date_ents[date_ent]={"date":str(date_ent)+"/01/"+str(curr_year)}
                             print({"value":str(new_date_ent)+"/01/"+str(curr_year)})
+                            return self
                 elif self.schema_curr_style == "sep_cols":
                     print("in sep_cols condition")
                     if re.search(self.parser_dict["mmddyys"], date_ent):
                         print("reformatting happening for sep_cols")
                         month, day, year = date_ent.split("/").split("-").split(".")#TODO():obvfindsomethingbetter | operator potentially
-                        self.date_ents[date_ent]={"month":self.month_maps[month], "day":day, "year":year}
+                        rev_month_maps = dict((v, k) for k,v in self.month_maps.items())
+                        self.date_ents[date_ent]["value"]={"month":rev_month_maps[month], "day":day, "year":year}
+                        return self
                     else:
                         print("no reformatting needed for sep_cols")
-                        return date_ent
+                        #self.date_ents[date_ent]["value"]=date_ent
+                        return self
                 else:
                     return "Oh No! Style may not be defined"#consider other cases that may be applicable
         except Exception as e:
