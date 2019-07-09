@@ -235,15 +235,16 @@ class DateHandler():
                         return self
                     else:
                         print("reformatting one_col")# give me all transactions in 2012, give me all transactions in october, give me all transactions in october 2012, give me all transactions on christmas for the last 6 years    
+                        new_date_ent=None
                         if date_ent in self.month_maps:
                             new_date_ent = self.month_maps[date_ent]
                             #print("this is the new date_ent", new_date_ent)
                             #print("this is the current date_ent", self.date_ents[date_ent])
                             if self.date_ents[date_ent]["case"] == "getLastDate":
                                 self.getLast(date_ent, self.date_ents[date_ent])
+                                # figure this outself.date_ents[new_date_ent]
 
                         if "year" in self.date_ents[date_ent]["value"]:
-                            print("are we getting here?")
                             #date_ent = {"date":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])}
                             print({"value":str(new_date_ent)+"/01/"+str(self.date_ents[date_ent]["year"])})
                             return self
