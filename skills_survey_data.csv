@@ -1,0 +1,657 @@
+,focus,score,theme,order
+0,Exploratory Data Analysis,4,Purpose Outcomes,ka
+1,Exploratory Data Analysis,3,Purpose Outcomes,db
+2,Exploratory Data Analysis,3,Purpose Outcomes,tb
+3,Exploratory Data Analysis,3,Purpose Outcomes,md
+4,Exploratory Data Analysis,3,Purpose Outcomes,rj
+5,Exploratory Data Analysis,0,Purpose Outcomes,kc
+6,Exploratory Data Analysis,3,Purpose Outcomes,mb
+7,Exploratory Data Analysis,2,Purpose Outcomes,ca
+8,Diagnostic Data Analysis,4,Purpose Outcomes,ka
+9,Diagnostic Data Analysis,3,Purpose Outcomes,db
+10,Diagnostic Data Analysis,3,Purpose Outcomes,tb
+11,Diagnostic Data Analysis,4,Purpose Outcomes,md
+12,Diagnostic Data Analysis,2,Purpose Outcomes,rj
+13,Diagnostic Data Analysis,1,Purpose Outcomes,kc
+14,Diagnostic Data Analysis,2,Purpose Outcomes,mb
+15,Diagnostic Data Analysis,2,Purpose Outcomes,ca
+16,Predictive Data Analysis,1,Purpose Outcomes,ka
+17,Predictive Data Analysis,0,Purpose Outcomes,db
+18,Predictive Data Analysis,2,Purpose Outcomes,tb
+19,Predictive Data Analysis,2,Purpose Outcomes,md
+20,Predictive Data Analysis,3,Purpose Outcomes,rj
+21,Predictive Data Analysis,2,Purpose Outcomes,kc
+22,Predictive Data Analysis,1,Purpose Outcomes,mb
+23,Predictive Data Analysis,1,Purpose Outcomes,ca
+24,Time Series Analysis,3,Purpose Outcomes,ka
+25,Time Series Analysis,1,Purpose Outcomes,db
+26,Time Series Analysis,2,Purpose Outcomes,tb
+27,Time Series Analysis,2,Purpose Outcomes,md
+28,Time Series Analysis,3,Purpose Outcomes,rj
+29,Time Series Analysis,2,Purpose Outcomes,kc
+30,Time Series Analysis,2,Purpose Outcomes,mb
+31,Time Series Analysis,4,Purpose Outcomes,ca
+32,Longitundinal Data Analysis,3,Purpose Outcomes,ka
+33,Longitundinal Data Analysis,1,Purpose Outcomes,db
+34,Longitundinal Data Analysis,2,Purpose Outcomes,tb
+35,Longitundinal Data Analysis,1,Purpose Outcomes,md
+36,Longitundinal Data Analysis,1,Purpose Outcomes,rj
+37,Longitundinal Data Analysis,1,Purpose Outcomes,kc
+38,Longitundinal Data Analysis,1,Purpose Outcomes,mb
+39,Longitundinal Data Analysis,0,Purpose Outcomes,ca
+40,Data Analysis Insights As Inputs,2,Purpose Outcomes,ka
+41,Data Analysis Insights As Inputs,2,Purpose Outcomes,db
+42,Data Analysis Insights As Inputs,2,Purpose Outcomes,tb
+43,Data Analysis Insights As Inputs,2,Purpose Outcomes,md
+44,Data Analysis Insights As Inputs,3,Purpose Outcomes,rj
+45,Data Analysis Insights As Inputs,0,Purpose Outcomes,kc
+46,Data Analysis Insights As Inputs,1,Purpose Outcomes,mb
+47,Data Analysis Insights As Inputs,0,Purpose Outcomes,ca
+48,C,1,Tech Tools Platform,ka
+49,C,1,Tech Tools Platform,db
+50,C,1,Tech Tools Platform,tb
+51,C,0,Tech Tools Platform,md
+52,C,2,Tech Tools Platform,rj
+53,C,3,Tech Tools Platform,kc
+54,C,0,Tech Tools Platform,mb
+55,C,0,Tech Tools Platform,ca
+56,C++,1,Tech Tools Platform,ka
+57,C++,0,Tech Tools Platform,db
+58,C++,2,Tech Tools Platform,tb
+59,C++,3,Tech Tools Platform,md
+60,C++,0,Tech Tools Platform,rj
+61,C++,4,Tech Tools Platform,kc
+62,C++,0,Tech Tools Platform,mb
+63,C++,2,Tech Tools Platform,ca
+64,C#,0,Tech Tools Platform,ka
+65,C#,0,Tech Tools Platform,db
+66,C#,1,Tech Tools Platform,tb
+67,C#,2,Tech Tools Platform,md
+68,C#,0,Tech Tools Platform,rj
+69,C#,0,Tech Tools Platform,kc
+70,C#,0,Tech Tools Platform,mb
+71,C#,0,Tech Tools Platform,ca
+72,Java,1,Tech Tools Platform,ka
+73,Java,1,Tech Tools Platform,db
+74,Java,2,Tech Tools Platform,tb
+75,Java,0,Tech Tools Platform,md
+76,Java,0,Tech Tools Platform,rj
+77,Java,2,Tech Tools Platform,kc
+78,Java,0,Tech Tools Platform,mb
+79,Java,0,Tech Tools Platform,ca
+80,Javacsript,1,Tech Tools Platform,ka
+81,Javacsript,0,Tech Tools Platform,db
+82,Javacsript,1,Tech Tools Platform,tb
+83,Javacsript,0,Tech Tools Platform,md
+84,Javacsript,0,Tech Tools Platform,rj
+85,Javacsript,0,Tech Tools Platform,kc
+86,Javacsript,0,Tech Tools Platform,mb
+87,Javacsript,0,Tech Tools Platform,ca
+88,Julia,0,Tech Tools Platform,ka
+89,Julia,0,Tech Tools Platform,db
+90,Julia,1,Tech Tools Platform,tb
+91,Julia,0,Tech Tools Platform,md
+92,Julia,0,Tech Tools Platform,rj
+93,Julia,0,Tech Tools Platform,kc
+94,Julia,0,Tech Tools Platform,mb
+95,Julia,0,Tech Tools Platform,ca
+96,Lisp/Closure,0,Tech Tools Platform,ka
+97,Lisp/Closure,0,Tech Tools Platform,db
+98,Lisp/Closure,1,Tech Tools Platform,tb
+99,Lisp/Closure,1,Tech Tools Platform,md
+100,Lisp/Closure,0,Tech Tools Platform,rj
+101,Lisp/Closure,1,Tech Tools Platform,kc
+102,Lisp/Closure,0,Tech Tools Platform,mb
+103,Lisp/Closure,0,Tech Tools Platform,ca
+104,.NET,0,Tech Tools Platform,ka
+105,.NET,0,Tech Tools Platform,db
+106,.NET,1,Tech Tools Platform,tb
+107,.NET,0,Tech Tools Platform,md
+108,.NET,0,Tech Tools Platform,rj
+109,.NET,0,Tech Tools Platform,kc
+110,.NET,0,Tech Tools Platform,mb
+111,.NET,0,Tech Tools Platform,ca
+112,Perl,0,Tech Tools Platform,ka
+113,Perl,0,Tech Tools Platform,db
+114,Perl,1,Tech Tools Platform,tb
+115,Perl,0,Tech Tools Platform,md
+116,Perl,0,Tech Tools Platform,rj
+117,Perl,1,Tech Tools Platform,kc
+118,Perl,0,Tech Tools Platform,mb
+119,Perl,0,Tech Tools Platform,ca
+120,PHP,0,Tech Tools Platform,ka
+121,PHP,0,Tech Tools Platform,db
+122,PHP,1,Tech Tools Platform,tb
+123,PHP,0,Tech Tools Platform,md
+124,PHP,0,Tech Tools Platform,rj
+125,PHP,0,Tech Tools Platform,kc
+126,PHP,0,Tech Tools Platform,mb
+127,PHP,0,Tech Tools Platform,ca
+128,Python,1,Tech Tools Platform,ka
+129,Python,0,Tech Tools Platform,db
+130,Python,2,Tech Tools Platform,tb
+131,Python,2,Tech Tools Platform,md
+132,Python,4,Tech Tools Platform,rj
+133,Python,1,Tech Tools Platform,kc
+134,Python,1,Tech Tools Platform,mb
+135,Python,1,Tech Tools Platform,ca
+136,R,1,Tech Tools Platform,ka
+137,R,1,Tech Tools Platform,db
+138,R,3,Tech Tools Platform,tb
+139,R,4,Tech Tools Platform,md
+140,R,3,Tech Tools Platform,rj
+141,R,1,Tech Tools Platform,kc
+142,R,3,Tech Tools Platform,mb
+143,R,2,Tech Tools Platform,ca
+144,Ruby/Rails,0,Tech Tools Platform,ka
+145,Ruby/Rails,0,Tech Tools Platform,db
+146,Ruby/Rails,1,Tech Tools Platform,tb
+147,Ruby/Rails,0,Tech Tools Platform,md
+148,Ruby/Rails,0,Tech Tools Platform,rj
+149,Ruby/Rails,0,Tech Tools Platform,kc
+150,Ruby/Rails,0,Tech Tools Platform,mb
+151,Ruby/Rails,0,Tech Tools Platform,ca
+152,Scala,0,Tech Tools Platform,ka
+153,Scala,0,Tech Tools Platform,db
+154,Scala,3,Tech Tools Platform,tb
+155,Scala,0,Tech Tools Platform,md
+156,Scala,0,Tech Tools Platform,rj
+157,Scala,0,Tech Tools Platform,kc
+158,Scala,0,Tech Tools Platform,mb
+159,Scala,0,Tech Tools Platform,ca
+160,SQL,2,Tech Tools Platform,ka
+161,SQL,0,Tech Tools Platform,db
+162,SQL,2,Tech Tools Platform,tb
+163,SQL,1,Tech Tools Platform,md
+164,SQL,1,Tech Tools Platform,rj
+165,SQL,1,Tech Tools Platform,kc
+166,SQL,0,Tech Tools Platform,mb
+167,SQL,0,Tech Tools Platform,ca
+168,Visual Basic,2,Tech Tools Platform,ka
+169,Visual Basic,2,Tech Tools Platform,db
+170,Visual Basic,2,Tech Tools Platform,tb
+171,Visual Basic,1,Tech Tools Platform,md
+172,Visual Basic,2,Tech Tools Platform,rj
+173,Visual Basic,0,Tech Tools Platform,kc
+174,Visual Basic,2,Tech Tools Platform,mb
+175,Visual Basic,0,Tech Tools Platform,ca
+176,Desktop Relational DBs,3,Tech Tools Platform,ka
+177,Desktop Relational DBs,2,Tech Tools Platform,db
+178,Desktop Relational DBs,3,Tech Tools Platform,tb
+179,Desktop Relational DBs,1,Tech Tools Platform,md
+180,Desktop Relational DBs,1,Tech Tools Platform,rj
+181,Desktop Relational DBs,0,Tech Tools Platform,kc
+182,Desktop Relational DBs,1,Tech Tools Platform,mb
+183,Desktop Relational DBs,1,Tech Tools Platform,ca
+184,Client Server Relational DBs,1,Tech Tools Platform,ka
+185,Client Server Relational DBs,0,Tech Tools Platform,db
+186,Client Server Relational DBs,3,Tech Tools Platform,tb
+187,Client Server Relational DBs,1,Tech Tools Platform,md
+188,Client Server Relational DBs,1,Tech Tools Platform,rj
+189,Client Server Relational DBs,0,Tech Tools Platform,kc
+190,Client Server Relational DBs,0,Tech Tools Platform,mb
+191,Client Server Relational DBs,0,Tech Tools Platform,ca
+192,NoSQL DBs,0,Tech Tools Platform,ka
+193,NoSQL DBs,0,Tech Tools Platform,db
+194,NoSQL DBs,1,Tech Tools Platform,tb
+195,NoSQL DBs,0,Tech Tools Platform,md
+196,NoSQL DBs,0,Tech Tools Platform,rj
+197,NoSQL DBs,0,Tech Tools Platform,kc
+198,NoSQL DBs,0,Tech Tools Platform,mb
+199,NoSQL DBs,0,Tech Tools Platform,ca
+200,Distributed DBs,0,Tech Tools Platform,ka
+201,Distributed DBs,0,Tech Tools Platform,db
+202,Distributed DBs,1,Tech Tools Platform,tb
+203,Distributed DBs,0,Tech Tools Platform,md
+204,Distributed DBs,0,Tech Tools Platform,rj
+205,Distributed DBs,0,Tech Tools Platform,kc
+206,Distributed DBs,0,Tech Tools Platform,mb
+207,Distributed DBs,0,Tech Tools Platform,ca
+208,Open Source DB Tools,1,Tech Tools Platform,ka
+209,Open Source DB Tools,1,Tech Tools Platform,db
+210,Open Source DB Tools,4,Tech Tools Platform,tb
+211,Open Source DB Tools,4,Tech Tools Platform,md
+212,Open Source DB Tools,4,Tech Tools Platform,rj
+213,Open Source DB Tools,1,Tech Tools Platform,kc
+214,Open Source DB Tools,4,Tech Tools Platform,mb
+215,Open Source DB Tools,2,Tech Tools Platform,ca
+216,Proprietary DB Tools,2,Tech Tools Platform,ka
+217,Proprietary DB Tools,2,Tech Tools Platform,db
+218,Proprietary DB Tools,2,Tech Tools Platform,tb
+219,Proprietary DB Tools,2,Tech Tools Platform,md
+220,Proprietary DB Tools,3,Tech Tools Platform,rj
+221,Proprietary DB Tools,2,Tech Tools Platform,kc
+222,Proprietary DB Tools,3,Tech Tools Platform,mb
+223,Proprietary DB Tools,4,Tech Tools Platform,ca
+224,Open source Machine learning tools,1,Tech Tools Platform,ka
+225,Open source Machine learning tools,0,Tech Tools Platform,db
+226,Open source Machine learning tools,2,Tech Tools Platform,tb
+227,Open source Machine learning tools,0,Tech Tools Platform,md
+228,Open source Machine learning tools,3,Tech Tools Platform,rj
+229,Open source Machine learning tools,0,Tech Tools Platform,kc
+230,Open source Machine learning tools,1,Tech Tools Platform,mb
+231,Open source Machine learning tools,1,Tech Tools Platform,ca
+232,Proprietary Machine learning tools,2,Tech Tools Platform,ka
+233,Proprietary Machine learning tools,2,Tech Tools Platform,db
+234,Proprietary Machine learning tools,1,Tech Tools Platform,tb
+235,Proprietary Machine learning tools,1,Tech Tools Platform,md
+236,Proprietary Machine learning tools,1,Tech Tools Platform,rj
+237,Proprietary Machine learning tools,1,Tech Tools Platform,kc
+238,Proprietary Machine learning tools,1,Tech Tools Platform,mb
+239,Proprietary Machine learning tools,0,Tech Tools Platform,ca
+240,Open Source Network Analysis tools,0,Tech Tools Platform,ka
+241,Open Source Network Analysis tools,0,Tech Tools Platform,db
+242,Open Source Network Analysis tools,1,Tech Tools Platform,tb
+243,Open Source Network Analysis tools,0,Tech Tools Platform,md
+244,Open Source Network Analysis tools,0,Tech Tools Platform,rj
+245,Open Source Network Analysis tools,0,Tech Tools Platform,kc
+246,Open Source Network Analysis tools,0,Tech Tools Platform,mb
+247,Open Source Network Analysis tools,0,Tech Tools Platform,ca
+248,Proprietary Network Analysis tools,0,Tech Tools Platform,ka
+249,Proprietary Network Analysis tools,0,Tech Tools Platform,db
+250,Proprietary Network Analysis tools,0,Tech Tools Platform,tb
+251,Proprietary Network Analysis tools,0,Tech Tools Platform,md
+252,Proprietary Network Analysis tools,0,Tech Tools Platform,rj
+253,Proprietary Network Analysis tools,0,Tech Tools Platform,kc
+254,Proprietary Network Analysis tools,0,Tech Tools Platform,mb
+255,Proprietary Network Analysis tools,0,Tech Tools Platform,ca
+256,Deep Learning Frameworks,0,Tech Tools Platform,ka
+257,Deep Learning Frameworks,0,Tech Tools Platform,db
+258,Deep Learning Frameworks,1,Tech Tools Platform,tb
+259,Deep Learning Frameworks,0,Tech Tools Platform,md
+260,Deep Learning Frameworks,1,Tech Tools Platform,rj
+261,Deep Learning Frameworks,0,Tech Tools Platform,kc
+262,Deep Learning Frameworks,1,Tech Tools Platform,mb
+263,Deep Learning Frameworks,0,Tech Tools Platform,ca
+264,Source Code Management,0,Tech Tools Platform,ka
+265,Source Code Management,0,Tech Tools Platform,db
+266,Source Code Management,2,Tech Tools Platform,tb
+267,Source Code Management,1,Tech Tools Platform,md
+268,Source Code Management,3,Tech Tools Platform,rj
+269,Source Code Management,0,Tech Tools Platform,kc
+270,Source Code Management,1,Tech Tools Platform,mb
+271,Source Code Management,1,Tech Tools Platform,ca
+272,Generating Data Visualizations,2,Tech Tools Platform,ka
+273,Generating Data Visualizations,2,Tech Tools Platform,db
+274,Generating Data Visualizations,2,Tech Tools Platform,tb
+275,Generating Data Visualizations,2,Tech Tools Platform,md
+276,Generating Data Visualizations,2,Tech Tools Platform,rj
+277,Generating Data Visualizations,0,Tech Tools Platform,kc
+278,Generating Data Visualizations,1,Tech Tools Platform,mb
+279,Generating Data Visualizations,0,Tech Tools Platform,ca
+280,Data Dashboards,3,Tech Tools Platform,ka
+281,Data Dashboards,2,Tech Tools Platform,db
+282,Data Dashboards,2,Tech Tools Platform,tb
+283,Data Dashboards,4,Tech Tools Platform,md
+284,Data Dashboards,1,Tech Tools Platform,rj
+285,Data Dashboards,2,Tech Tools Platform,kc
+286,Data Dashboards,2,Tech Tools Platform,mb
+287,Data Dashboards,0,Tech Tools Platform,ca
+288,Distributed Computing,1,Tech Tools Platform,ka
+289,Distributed Computing,0,Tech Tools Platform,db
+290,Distributed Computing,1,Tech Tools Platform,tb
+291,Distributed Computing,1,Tech Tools Platform,md
+292,Distributed Computing,2,Tech Tools Platform,rj
+293,Distributed Computing,0,Tech Tools Platform,kc
+294,Distributed Computing,0,Tech Tools Platform,mb
+295,Distributed Computing,0,Tech Tools Platform,ca
+296,Cloud-based Computing,0,Tech Tools Platform,ka
+297,Cloud-based Computing,0,Tech Tools Platform,db
+298,Cloud-based Computing,2,Tech Tools Platform,tb
+299,Cloud-based Computing,1,Tech Tools Platform,md
+300,Cloud-based Computing,1,Tech Tools Platform,rj
+301,Cloud-based Computing,0,Tech Tools Platform,kc
+302,Cloud-based Computing,0,Tech Tools Platform,mb
+303,Cloud-based Computing,1,Tech Tools Platform,ca
+304,Open Source GIS tools,0,Tech Tools Platform,ka
+305,Open Source GIS tools,0,Tech Tools Platform,db
+306,Open Source GIS tools,1,Tech Tools Platform,tb
+307,Open Source GIS tools,0,Tech Tools Platform,md
+308,Open Source GIS tools,0,Tech Tools Platform,rj
+309,Open Source GIS tools,0,Tech Tools Platform,kc
+310,Open Source GIS tools,0,Tech Tools Platform,mb
+311,Open Source GIS tools,0,Tech Tools Platform,ca
+312,Proprietary GIS tools,0,Tech Tools Platform,ka
+313,Proprietary GIS tools,0,Tech Tools Platform,db
+314,Proprietary GIS tools,3,Tech Tools Platform,tb
+315,Proprietary GIS tools,1,Tech Tools Platform,md
+316,Proprietary GIS tools,0,Tech Tools Platform,rj
+317,Proprietary GIS tools,0,Tech Tools Platform,kc
+318,Proprietary GIS tools,0,Tech Tools Platform,mb
+319,Proprietary GIS tools,2,Tech Tools Platform,ca
+320,GPU processing,0,Tech Tools Platform,ka
+321,GPU processing,0,Tech Tools Platform,db
+322,GPU processing,1,Tech Tools Platform,tb
+323,GPU processing,1,Tech Tools Platform,md
+324,GPU processing,0,Tech Tools Platform,rj
+325,GPU processing,0,Tech Tools Platform,kc
+326,GPU processing,0,Tech Tools Platform,mb
+327,GPU processing,0,Tech Tools Platform,ca
+328,In memory processing,0,Tech Tools Platform,ka
+329,In memory processing,0,Tech Tools Platform,db
+330,In memory processing,1,Tech Tools Platform,tb
+331,In memory processing,1,Tech Tools Platform,md
+332,In memory processing,1,Tech Tools Platform,rj
+333,In memory processing,0,Tech Tools Platform,kc
+334,In memory processing,0,Tech Tools Platform,mb
+335,In memory processing,0,Tech Tools Platform,ca
+336,Microservices,0,Tech Tools Platform,ka
+337,Microservices,0,Tech Tools Platform,db
+338,Microservices,1,Tech Tools Platform,tb
+339,Microservices,0,Tech Tools Platform,md
+340,Microservices,0,Tech Tools Platform,rj
+341,Microservices,0,Tech Tools Platform,kc
+342,Microservices,0,Tech Tools Platform,mb
+343,Microservices,0,Tech Tools Platform,ca
+344,Multi-threading,0,Tech Tools Platform,ka
+345,Multi-threading,0,Tech Tools Platform,db
+346,Multi-threading,1,Tech Tools Platform,tb
+347,Multi-threading,1,Tech Tools Platform,md
+348,Multi-threading,0,Tech Tools Platform,rj
+349,Multi-threading,1,Tech Tools Platform,kc
+350,Multi-threading,0,Tech Tools Platform,mb
+351,Multi-threading,0,Tech Tools Platform,ca
+352,Less Than 10GB,4,Data Size,ka
+353,Less Than 10GB,3,Data Size,db
+354,Less Than 10GB,4,Data Size,tb
+355,Less Than 10GB,4,Data Size,md
+356,Less Than 10GB,4,Data Size,rj
+357,Less Than 10GB,3,Data Size,kc
+358,Less Than 10GB,4,Data Size,mb
+359,Less Than 10GB,4,Data Size,ca
+360,More Than 10GB Less Than 100GB,3,Data Size,ka
+361,More Than 10GB Less Than 100GB,2,Data Size,db
+362,More Than 10GB Less Than 100GB,1,Data Size,tb
+363,More Than 10GB Less Than 100GB,1,Data Size,md
+364,More Than 10GB Less Than 100GB,2,Data Size,rj
+365,More Than 10GB Less Than 100GB,2,Data Size,kc
+366,More Than 10GB Less Than 100GB,0,Data Size,mb
+367,More Than 10GB Less Than 100GB,0,Data Size,ca
+368,More Than 100GB Less Than 1TB,2,Data Size,ka
+369,More Than 100GB Less Than 1TB,0,Data Size,db
+370,More Than 100GB Less Than 1TB,1,Data Size,tb
+371,More Than 100GB Less Than 1TB,1,Data Size,md
+372,More Than 100GB Less Than 1TB,0,Data Size,rj
+373,More Than 100GB Less Than 1TB,1,Data Size,kc
+374,More Than 100GB Less Than 1TB,0,Data Size,mb
+375,More Than 100GB Less Than 1TB,0,Data Size,ca
+376,More Than 1TB Less Than 100TB,1,Data Size,ka
+377,More Than 1TB Less Than 100TB,0,Data Size,db
+378,More Than 1TB Less Than 100TB,1,Data Size,tb
+379,More Than 1TB Less Than 100TB,0,Data Size,md
+380,More Than 1TB Less Than 100TB,0,Data Size,rj
+381,More Than 1TB Less Than 100TB,0,Data Size,kc
+382,More Than 1TB Less Than 100TB,0,Data Size,mb
+383,More Than 1TB Less Than 100TB,0,Data Size,ca
+384,More Than 100TB Less Than 1PB,0,Data Size,ka
+385,More Than 100TB Less Than 1PB,0,Data Size,db
+386,More Than 100TB Less Than 1PB,1,Data Size,tb
+387,More Than 100TB Less Than 1PB,0,Data Size,md
+388,More Than 100TB Less Than 1PB,0,Data Size,rj
+389,More Than 100TB Less Than 1PB,0,Data Size,kc
+390,More Than 100TB Less Than 1PB,0,Data Size,mb
+391,More Than 100TB Less Than 1PB,0,Data Size,ca
+392,More Than 1PB,0,Data Size,ka
+393,More Than 1PB,0,Data Size,db
+394,More Than 1PB,1,Data Size,tb
+395,More Than 1PB,0,Data Size,md
+396,More Than 1PB,0,Data Size,rj
+397,More Than 1PB,0,Data Size,kc
+398,More Than 1PB,0,Data Size,mb
+399,More Than 1PB,0,Data Size,ca
+400,Feature Selection,1,Data Size,ka
+401,Feature Selection,0,Data Size,db
+402,Feature Selection,3,Data Size,tb
+403,Feature Selection,3,Data Size,md
+404,Feature Selection,3,Data Size,rj
+405,Feature Selection,0,Data Size,kc
+406,Feature Selection,3,Data Size,mb
+407,Feature Selection,0,Data Size,ca
+408,Feature Extraction,1,Data Size,ka
+409,Feature Extraction,0,Data Size,db
+410,Feature Extraction,2,Data Size,tb
+411,Feature Extraction,1,Data Size,md
+412,Feature Extraction,2,Data Size,rj
+413,Feature Extraction,0,Data Size,kc
+414,Feature Extraction,2,Data Size,mb
+415,Feature Extraction,0,Data Size,ca
+416,Audio Formats,1,Data Characteristics Storage Mgmt,ka
+417,Audio Formats,0,Data Characteristics Storage Mgmt,db
+418,Audio Formats,2,Data Characteristics Storage Mgmt,tb
+419,Audio Formats,0,Data Characteristics Storage Mgmt,md
+420,Audio Formats,0,Data Characteristics Storage Mgmt,rj
+421,Audio Formats,0,Data Characteristics Storage Mgmt,kc
+422,Audio Formats,0,Data Characteristics Storage Mgmt,mb
+423,Audio Formats,0,Data Characteristics Storage Mgmt,ca
+424,Geospatial Formats,0,Data Characteristics Storage Mgmt,ka
+425,Geospatial Formats,0,Data Characteristics Storage Mgmt,db
+426,Geospatial Formats,2,Data Characteristics Storage Mgmt,tb
+427,Geospatial Formats,0,Data Characteristics Storage Mgmt,md
+428,Geospatial Formats,1,Data Characteristics Storage Mgmt,rj
+429,Geospatial Formats,0,Data Characteristics Storage Mgmt,kc
+430,Geospatial Formats,0,Data Characteristics Storage Mgmt,mb
+431,Geospatial Formats,1,Data Characteristics Storage Mgmt,ca
+432,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,ka
+433,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,db
+434,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,tb
+435,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,md
+436,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,rj
+437,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,kc
+438,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,mb
+439,Hierarchical Data Format,0,Data Characteristics Storage Mgmt,ca
+440,Image Formats,1,Data Characteristics Storage Mgmt,ka
+441,Image Formats,0,Data Characteristics Storage Mgmt,db
+442,Image Formats,1,Data Characteristics Storage Mgmt,tb
+443,Image Formats,0,Data Characteristics Storage Mgmt,md
+444,Image Formats,2,Data Characteristics Storage Mgmt,rj
+445,Image Formats,0,Data Characteristics Storage Mgmt,kc
+446,Image Formats,0,Data Characteristics Storage Mgmt,mb
+447,Image Formats,2,Data Characteristics Storage Mgmt,ca
+448,Javascript Object Notation,0,Data Characteristics Storage Mgmt,ka
+449,Javascript Object Notation,0,Data Characteristics Storage Mgmt,db
+450,Javascript Object Notation,2,Data Characteristics Storage Mgmt,tb
+451,Javascript Object Notation,0,Data Characteristics Storage Mgmt,md
+452,Javascript Object Notation,1,Data Characteristics Storage Mgmt,rj
+453,Javascript Object Notation,0,Data Characteristics Storage Mgmt,kc
+454,Javascript Object Notation,0,Data Characteristics Storage Mgmt,mb
+455,Javascript Object Notation,0,Data Characteristics Storage Mgmt,ca
+456,CSV/ascii,0,Data Characteristics Storage Mgmt,ka
+457,CSV/ascii,0,Data Characteristics Storage Mgmt,db
+458,CSV/ascii,4,Data Characteristics Storage Mgmt,tb
+459,CSV/ascii,0,Data Characteristics Storage Mgmt,md
+460,CSV/ascii,4,Data Characteristics Storage Mgmt,rj
+461,CSV/ascii,0,Data Characteristics Storage Mgmt,kc
+462,CSV/ascii,0,Data Characteristics Storage Mgmt,mb
+463,CSV/ascii,3,Data Characteristics Storage Mgmt,ca
+464,Video Formats,1,Data Characteristics Storage Mgmt,ka
+465,Video Formats,0,Data Characteristics Storage Mgmt,db
+466,Video Formats,1,Data Characteristics Storage Mgmt,tb
+467,Video Formats,0,Data Characteristics Storage Mgmt,md
+468,Video Formats,0,Data Characteristics Storage Mgmt,rj
+469,Video Formats,0,Data Characteristics Storage Mgmt,kc
+470,Video Formats,3,Data Characteristics Storage Mgmt,mb
+471,Video Formats,0,Data Characteristics Storage Mgmt,ca
+472,XML,0,Data Characteristics Storage Mgmt,ka
+473,XML,0,Data Characteristics Storage Mgmt,db
+474,XML,2,Data Characteristics Storage Mgmt,tb
+475,XML,0,Data Characteristics Storage Mgmt,md
+476,XML,0,Data Characteristics Storage Mgmt,rj
+477,XML,0,Data Characteristics Storage Mgmt,kc
+478,XML,0,Data Characteristics Storage Mgmt,mb
+479,XML,0,Data Characteristics Storage Mgmt,ca
+480,Unstructured Text,1,Data Characteristics Storage Mgmt,ka
+481,Unstructured Text,2,Data Characteristics Storage Mgmt,db
+482,Unstructured Text,2,Data Characteristics Storage Mgmt,tb
+483,Unstructured Text,1,Data Characteristics Storage Mgmt,md
+484,Unstructured Text,2,Data Characteristics Storage Mgmt,rj
+485,Unstructured Text,0,Data Characteristics Storage Mgmt,kc
+486,Unstructured Text,1,Data Characteristics Storage Mgmt,mb
+487,Unstructured Text,0,Data Characteristics Storage Mgmt,ca
+488,Data Warehouses,2,Data Characteristics Storage Mgmt,ka
+489,Data Warehouses,0,Data Characteristics Storage Mgmt,db
+490,Data Warehouses,2,Data Characteristics Storage Mgmt,tb
+491,Data Warehouses,1,Data Characteristics Storage Mgmt,md
+492,Data Warehouses,2,Data Characteristics Storage Mgmt,rj
+493,Data Warehouses,0,Data Characteristics Storage Mgmt,kc
+494,Data Warehouses,0,Data Characteristics Storage Mgmt,mb
+495,Data Warehouses,0,Data Characteristics Storage Mgmt,ca
+496,Data Lakes,1,Data Characteristics Storage Mgmt,ka
+497,Data Lakes,0,Data Characteristics Storage Mgmt,db
+498,Data Lakes,2,Data Characteristics Storage Mgmt,tb
+499,Data Lakes,0,Data Characteristics Storage Mgmt,md
+500,Data Lakes,2,Data Characteristics Storage Mgmt,rj
+501,Data Lakes,0,Data Characteristics Storage Mgmt,kc
+502,Data Lakes,0,Data Characteristics Storage Mgmt,mb
+503,Data Lakes,0,Data Characteristics Storage Mgmt,ca
+504,Data Governance,1,Data Characteristics Storage Mgmt,ka
+505,Data Governance,0,Data Characteristics Storage Mgmt,db
+506,Data Governance,2,Data Characteristics Storage Mgmt,tb
+507,Data Governance,0,Data Characteristics Storage Mgmt,md
+508,Data Governance,1,Data Characteristics Storage Mgmt,rj
+509,Data Governance,0,Data Characteristics Storage Mgmt,kc
+510,Data Governance,0,Data Characteristics Storage Mgmt,mb
+511,Data Governance,0,Data Characteristics Storage Mgmt,ca
+512,Data Engineering,1,Analysis Techniques,ka
+513,Data Engineering,0,Analysis Techniques,db
+514,Data Engineering,2,Analysis Techniques,tb
+515,Data Engineering,0,Analysis Techniques,md
+516,Data Engineering,3,Analysis Techniques,rj
+517,Data Engineering,1,Analysis Techniques,kc
+518,Data Engineering,1,Analysis Techniques,mb
+519,Data Engineering,0,Analysis Techniques,ca
+520,Extract Transform Load,1,Analysis Techniques,ka
+521,Extract Transform Load,0,Analysis Techniques,db
+522,Extract Transform Load,2,Analysis Techniques,tb
+523,Extract Transform Load,0,Analysis Techniques,md
+524,Extract Transform Load,2,Analysis Techniques,rj
+525,Extract Transform Load,1,Analysis Techniques,kc
+526,Extract Transform Load,0,Analysis Techniques,mb
+527,Extract Transform Load,0,Analysis Techniques,ca
+528,Feature Engineering,0,Analysis Techniques,ka
+529,Feature Engineering,0,Analysis Techniques,db
+530,Feature Engineering,2,Analysis Techniques,tb
+531,Feature Engineering,2,Analysis Techniques,md
+532,Feature Engineering,3,Analysis Techniques,rj
+533,Feature Engineering,0,Analysis Techniques,kc
+534,Feature Engineering,2,Analysis Techniques,mb
+535,Feature Engineering,0,Analysis Techniques,ca
+536,Supervised Feature Learning,0,Analysis Techniques,ka
+537,Supervised Feature Learning,0,Analysis Techniques,db
+538,Supervised Feature Learning,2,Analysis Techniques,tb
+539,Supervised Feature Learning,0,Analysis Techniques,md
+540,Supervised Feature Learning,4,Analysis Techniques,rj
+541,Supervised Feature Learning,0,Analysis Techniques,kc
+542,Supervised Feature Learning,1,Analysis Techniques,mb
+543,Supervised Feature Learning,0,Analysis Techniques,ca
+544,Unsupervised Feature Learning,0,Analysis Techniques,ka
+545,Unsupervised Feature Learning,0,Analysis Techniques,db
+546,Unsupervised Feature Learning,2,Analysis Techniques,tb
+547,Unsupervised Feature Learning,2,Analysis Techniques,md
+548,Unsupervised Feature Learning,3,Analysis Techniques,rj
+549,Unsupervised Feature Learning,0,Analysis Techniques,kc
+550,Unsupervised Feature Learning,2,Analysis Techniques,mb
+551,Unsupervised Feature Learning,0,Analysis Techniques,ca
+552,Convolutional Neural Network,0,Analysis Techniques,ka
+553,Convolutional Neural Network,0,Analysis Techniques,db
+554,Convolutional Neural Network,1,Analysis Techniques,tb
+555,Convolutional Neural Network,0,Analysis Techniques,md
+556,Convolutional Neural Network,1,Analysis Techniques,rj
+557,Convolutional Neural Network,1,Analysis Techniques,kc
+558,Convolutional Neural Network,1,Analysis Techniques,mb
+559,Convolutional Neural Network,0,Analysis Techniques,ca
+560,Decision Tree,2,Analysis Techniques,ka
+561,Decision Tree,1,Analysis Techniques,db
+562,Decision Tree,4,Analysis Techniques,tb
+563,Decision Tree,1,Analysis Techniques,md
+564,Decision Tree,4,Analysis Techniques,rj
+565,Decision Tree,1,Analysis Techniques,kc
+566,Decision Tree,2,Analysis Techniques,mb
+567,Decision Tree,0,Analysis Techniques,ca
+568,Deep Learning,0,Analysis Techniques,ka
+569,Deep Learning,0,Analysis Techniques,db
+570,Deep Learning,1,Analysis Techniques,tb
+571,Deep Learning,0,Analysis Techniques,md
+572,Deep Learning,2,Analysis Techniques,rj
+573,Deep Learning,0,Analysis Techniques,kc
+574,Deep Learning,1,Analysis Techniques,mb
+575,Deep Learning,0,Analysis Techniques,ca
+576,Deep Neural Network,0,Analysis Techniques,ka
+577,Deep Neural Network,0,Analysis Techniques,db
+578,Deep Neural Network,1,Analysis Techniques,tb
+579,Deep Neural Network,0,Analysis Techniques,md
+580,Deep Neural Network,2,Analysis Techniques,rj
+581,Deep Neural Network,0,Analysis Techniques,kc
+582,Deep Neural Network,1,Analysis Techniques,mb
+583,Deep Neural Network,0,Analysis Techniques,ca
+584,K-means Clustering,1,Analysis Techniques,ka
+585,K-means Clustering,0,Analysis Techniques,db
+586,K-means Clustering,3,Analysis Techniques,tb
+587,K-means Clustering,1,Analysis Techniques,md
+588,K-means Clustering,3,Analysis Techniques,rj
+589,K-means Clustering,0,Analysis Techniques,kc
+590,K-means Clustering,2,Analysis Techniques,mb
+591,K-means Clustering,1,Analysis Techniques,ca
+592,Support Vector Machine,2,Analysis Techniques,ka
+593,Support Vector Machine,0,Analysis Techniques,db
+594,Support Vector Machine,2,Analysis Techniques,tb
+595,Support Vector Machine,1,Analysis Techniques,md
+596,Support Vector Machine,3,Analysis Techniques,rj
+597,Support Vector Machine,0,Analysis Techniques,kc
+598,Support Vector Machine,0,Analysis Techniques,mb
+599,Support Vector Machine,0,Analysis Techniques,ca
+600,Natural Language Processing,1,Analysis Techniques,ka
+601,Natural Language Processing,2,Analysis Techniques,db
+602,Natural Language Processing,2,Analysis Techniques,tb
+603,Natural Language Processing,3,Analysis Techniques,md
+604,Natural Language Processing,2,Analysis Techniques,rj
+605,Natural Language Processing,1,Analysis Techniques,kc
+606,Natural Language Processing,0,Analysis Techniques,mb
+607,Natural Language Processing,1,Analysis Techniques,ca
+608,Agent Based,3,Analysis Techniques,ka
+609,Agent Based,1,Analysis Techniques,db
+610,Agent Based,1,Analysis Techniques,tb
+611,Agent Based,0,Analysis Techniques,md
+612,Agent Based,1,Analysis Techniques,rj
+613,Agent Based,0,Analysis Techniques,kc
+614,Agent Based,0,Analysis Techniques,mb
+615,Agent Based,0,Analysis Techniques,ca
+616,Discrete Event,3,Analysis Techniques,ka
+617,Discrete Event,1,Analysis Techniques,db
+618,Discrete Event,2,Analysis Techniques,tb
+619,Discrete Event,3,Analysis Techniques,md
+620,Discrete Event,3,Analysis Techniques,rj
+621,Discrete Event,2,Analysis Techniques,kc
+622,Discrete Event,1,Analysis Techniques,mb
+623,Discrete Event,4,Analysis Techniques,ca
+624,Microsimulation,2,Analysis Techniques,ka
+625,Microsimulation,0,Analysis Techniques,db
+626,Microsimulation,0,Analysis Techniques,tb
+627,Microsimulation,2,Analysis Techniques,md
+628,Microsimulation,0,Analysis Techniques,rj
+629,Microsimulation,0,Analysis Techniques,kc
+630,Microsimulation,0,Analysis Techniques,mb
+631,Microsimulation,0,Analysis Techniques,ca
+632,Monte Carlo,3,Analysis Techniques,ka
+633,Monte Carlo,1,Analysis Techniques,db
+634,Monte Carlo,3,Analysis Techniques,tb
+635,Monte Carlo,3,Analysis Techniques,md
+636,Monte Carlo,3,Analysis Techniques,rj
+637,Monte Carlo,2,Analysis Techniques,kc
+638,Monte Carlo,1,Analysis Techniques,mb
+639,Monte Carlo,3,Analysis Techniques,ca
+640,Systems Dynamics,2,Analysis Techniques,ka
+641,Systems Dynamics,0,Analysis Techniques,db
+642,Systems Dynamics,3,Analysis Techniques,tb
+643,Systems Dynamics,2,Analysis Techniques,md
+644,Systems Dynamics,0,Analysis Techniques,rj
+645,Systems Dynamics,0,Analysis Techniques,kc
+646,Systems Dynamics,1,Analysis Techniques,mb
+647,Systems Dynamics,2,Analysis Techniques,ca
+648,Generate Pseudo Datasets,3,Analysis Techniques,ka
+649,Generate Pseudo Datasets,1,Analysis Techniques,db
+650,Generate Pseudo Datasets,2,Analysis Techniques,tb
+651,Generate Pseudo Datasets,0,Analysis Techniques,md
+652,Generate Pseudo Datasets,3,Analysis Techniques,rj
+653,Generate Pseudo Datasets,0,Analysis Techniques,kc
+654,Generate Pseudo Datasets,0,Analysis Techniques,mb
+655,Generate Pseudo Datasets,3,Analysis Techniques,ca
